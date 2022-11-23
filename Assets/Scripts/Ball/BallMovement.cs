@@ -10,7 +10,7 @@ public class BallMovement : MonoBehaviour
     void Start()
     {
         _inputController = GetComponent<InputController>();
-        _ballSpeed = 2.5f;
+        _ballSpeed = 4.0f;
     }
 
 
