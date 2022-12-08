@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1262503395180137944}
   - component: {fileID: 7007741904291542541}
   - component: {fileID: 5683547230240014461}
+  - component: {fileID: 4335763721914929220}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -111,7 +112,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &5683547230240014461
 MonoBehaviour:
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401f40f98f7af9a42b70350eeb345f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4335763721914929220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262503395180137943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73885772689857745aec5f195336cab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firstPlatform: {fileID: 1262503395180137943}

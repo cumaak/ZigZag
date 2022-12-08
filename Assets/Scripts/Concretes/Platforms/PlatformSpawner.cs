@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformSpawner : MonoBehaviour
+public class PlatformSpawner : Positioning
 {
     private List<GameObject> _platforms;
     [SerializeField] GameObject Platform;
-    [SerializeField] GameObject _firstPlatform;
-    private Vector3 _lastPosition;
-    private int _leftCount;
-    private int _forwardCount;
+    //[SerializeField] GameObject _firstPlatform;
+    //private Vector3 _lastPosition;
+    //private int _leftCount;
+    //private int _forwardCount;
 
     private void Awake()
     {
@@ -23,7 +23,8 @@ public class PlatformSpawner : MonoBehaviour
     {
         for(int i=0; i<30; i++)
         {
-            SpawnPlatform(_platforms[i]);
+            //SpawnPlatform(_platforms[i]);
+            Position(_platforms[i]);
         }
     }
 
@@ -34,7 +35,7 @@ public class PlatformSpawner : MonoBehaviour
             List.Add(Instantiate(Platform));
         }
     }
-    public void SpawnPlatform(GameObject gameobject)
+    /*public void SpawnPlatform(GameObject gameobject)
     {
         if (Random.Range(0, 2) == 0)
         {
@@ -71,5 +72,5 @@ public class PlatformSpawner : MonoBehaviour
             }
         }
         
-    }
+    }*/
 }
