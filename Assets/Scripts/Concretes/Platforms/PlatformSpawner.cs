@@ -21,7 +21,7 @@ public class PlatformSpawner : Positioning
     }
     private void Start()
     {
-        for(int i=0; i<30; i++)
+        for(int i=0; i<40; i++)
         {
             //SpawnPlatform(_platforms[i]);
             Position(_platforms[i]);
@@ -30,7 +30,7 @@ public class PlatformSpawner : Positioning
 
     private void CreatePlatform(List<GameObject> List)
     {
-        for(int i=0; i<30; i++)
+        for(int i=0; i<40; i++)
         {
             List.Add(Instantiate(Platform));
         }

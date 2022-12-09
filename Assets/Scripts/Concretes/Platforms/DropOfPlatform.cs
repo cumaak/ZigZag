@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DropOfPlatform : Dropping
 {
-    //PlatformSpawner _platformSpawner;
+    PlatformSpawner _platformSpawner;
 
     private void Start()
     {
-        //_platformSpawner = GameObject.Find("PlatformSpawner").GetComponent<PlatformSpawner>();
+        _platformSpawner = GameObject.Find("PlatformSpawner").GetComponent<PlatformSpawner>();
     }
 
     private void OnCollisionExit(Collision collision)
@@ -17,7 +17,7 @@ public class DropOfPlatform : Dropping
         {
             //StartCoroutine(Falling(this.gameObject));
             StartCoroutine(Drop(this.gameObject));
-            //StartCoroutine(Respawn(this.gameObject));
+            StartCoroutine(Reposition(this.gameObject));
         }
     }
 
@@ -30,10 +30,10 @@ public class DropOfPlatform : Dropping
         Platform.GetComponent<Rigidbody>().useGravity = false;
         Platform.GetComponent<Rigidbody>().isKinematic = true;
     }*/
-    /*IEnumerator Reposition(GameObject Platform)
+    IEnumerator Reposition(GameObject Platform)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.0f);
         _platformSpawner.Position(this.gameObject);
-    }*/
+    }
 
 }

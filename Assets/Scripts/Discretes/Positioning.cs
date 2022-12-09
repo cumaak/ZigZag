@@ -9,6 +9,7 @@ public abstract class Positioning : MonoBehaviour
     protected Vector3 _lastPosition;
     protected int _leftCount;
     protected int _forwardCount;
+
     public virtual void Position(GameObject gameobject)
     {
         if (Random.Range(0, 2) == 0)

@@ -2,18 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepositioningOfPlatform : Positioning
+public class DropOfBase : Dropping
 {
     private void OnCollisionExit(Collision collision)
     {
         if(collision.gameObject.name == "Ball")
         {
-            StartCoroutine(Reposition());
+            StartCoroutine(Drop(this.gameObject));
         }
-    }
-    IEnumerator Reposition()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Position(this.gameObject);
     }
 }
