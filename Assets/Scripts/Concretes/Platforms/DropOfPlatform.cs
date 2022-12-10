@@ -6,7 +6,7 @@ public class DropOfPlatform : Dropping
 {
     PlatformSpawner _platformSpawner;
 
-    private void Start()
+    private void Awake()
     {
         _platformSpawner = GameObject.Find("PlatformSpawner").GetComponent<PlatformSpawner>();
     }
@@ -15,21 +15,10 @@ public class DropOfPlatform : Dropping
     {
         if(collision.gameObject.name == "Ball")
         {
-            //StartCoroutine(Falling(this.gameObject));
             StartCoroutine(Drop(this.gameObject));
             StartCoroutine(Reposition(this.gameObject));
         }
     }
-
-    /*IEnumerator Falling(GameObject Platform)
-    {
-        yield return new WaitForSeconds(0.5f);
-        Platform.GetComponent<Rigidbody>().useGravity = true;
-        Platform.GetComponent<Rigidbody>().isKinematic = false;
-        yield return new WaitForSeconds(1.0f);
-        Platform.GetComponent<Rigidbody>().useGravity = false;
-        Platform.GetComponent<Rigidbody>().isKinematic = true;
-    }*/
     IEnumerator Reposition(GameObject Platform)
     {
         yield return new WaitForSeconds(2.0f);
