@@ -6,23 +6,23 @@ namespace ZigZag.InputController
 {
     public class InputController : MonoBehaviour
     {
-        public Vector3 _direction { get; private set; }
+        public Vector3 Direction { get; private set; }
         void Start()
         {
-            _direction = Vector3.forward;
+            Direction = Vector3.forward;
         }
 
         void Update()
         {
             if(Input.GetMouseButtonDown(0))
             {
-                if(_direction.x == 0f)
+                if(Direction.x == 0f)
                 {
-                    _direction = Vector3.left;
+                    Direction = Vector3.left;
                 }
                 else
                 {
-                    _direction = Vector3.forward;
+                    Direction = Vector3.forward;
                 }
             }
         }

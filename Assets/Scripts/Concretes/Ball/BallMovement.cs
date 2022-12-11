@@ -16,6 +16,6 @@ public class BallMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += _inputController._direction * _ballSpeed * Time.deltaTime;
+        transform.position += _inputController.Direction * _ballSpeed * Time.deltaTime;
     }
 }
