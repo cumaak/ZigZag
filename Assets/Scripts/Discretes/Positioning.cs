@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Positioning : MonoBehaviour
 {
-    //[SerializeField] protected GameObject Platform;
     [SerializeField] protected GameObject _firstPlatform;
     protected Vector3 _lastPosition;
     protected int _leftCount;
