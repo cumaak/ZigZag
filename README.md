@@ -1,6 +1,8 @@
 # ZigZag
 ZigZag game is a hyper casual game with unity.
+
 Go on forever without leaving the platforms.
+
 Screenshots:
 
 ![zigzag_1](https://github.com/cumaak/ZigZag/assets/114804157/5d9a8916-bfae-4468-bbf5-f6fc8015b2a4)
